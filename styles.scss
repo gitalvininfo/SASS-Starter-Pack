@@ -1,0 +1,68 @@
+$my-color: green;
+:root {
+    --my-color: red;
+    --p-tag: blue;
+}
+
+body.dm {
+    $my-color: yellow;
+    font: {
+        family: Helvetica, sans-serif;
+        size: 18px;
+        weight: bold;
+    }
+    text: {
+        align: center;
+        transform: lowercase;
+        overflow: hidden;
+    }
+    p {
+        color: $my-color;
+    }
+}
+
+h4 {
+    $myColor: var(--my-color);
+    color: $myColor;
+}
+
+p {
+    color: var(--p-tag);
+}
+
+// Mixins & Include
+@mixin box {
+    border: 2px solid red;
+    padding: 10px;
+    margin-bottom: 10px
+}
+
+.box-mixin {
+    @include box;
+    background-color: wheat;
+}
+
+// Extends
+.box-extend {
+    @include box;
+    background-color: whitesmoke;
+}
+
+.button-basic {
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button-report {
+    @extend .button-basic;
+    background-color: red;
+}
+
+.button-submit {
+    @extend .button-basic;
+    background-color: green;
+    color: white;
+}

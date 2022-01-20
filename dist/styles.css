@@ -1,0 +1,55 @@
+:root {
+  --my-color: red;
+  --p-tag: blue;
+}
+
+body.dm {
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: lowercase;
+  text-overflow: hidden;
+}
+body.dm p {
+  color: yellow;
+}
+
+h4 {
+  color: var(--my-color);
+}
+
+p {
+  color: var(--p-tag);
+}
+
+.box-mixin {
+  border: 2px solid red;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: wheat;
+}
+
+.box-extend {
+  border: 2px solid red;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: whitesmoke;
+}
+
+.button-basic, .button-submit, .button-report {
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-report {
+  background-color: red;
+}
+
+.button-submit {
+  background-color: green;
+  color: white;
+}
